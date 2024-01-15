@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -5,21 +6,35 @@
             margin: 0;
             padding: 0;
         }
+        body {
+            overflow: hidden; /* Disable body scroll */
+        }
+        .scroll-container {
+            height: 100vh; /*Set the height of the container with top and bottom margin*/
+            overflow-y: scroll; /* Enable vertical scrolling */
+            background-color: aliceblue;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+        }
         .imgbox {
             display: grid;
-            height: 100%;
-            background-color: aliceblue;
+            margin: 0 15vh; /* Add left and right margin to the content */
         }
         .center-fit {
             max-width: 100%;
-            max-height: 100vh;
+            max-height: 100%;
             margin: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-<div class="imgbox">
-    <img class="center-fit" src='shashwatik_resume_sept_page-0001.jpg'>
+<div class="scroll-container">
+    <div class="imgbox">
+        <img class="center-fit" src='shashwatik_resume_sept_page-0001.jpg'>
+    </div>
 </div>
 </body>
 </html>
